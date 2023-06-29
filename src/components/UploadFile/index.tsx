@@ -8,16 +8,16 @@ import {
 } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
 import { FC, ReactEventHandler, useCallback, useState } from 'react';
-import csvToJson, { CsvToJsonResult } from '../../utils/csvToJson';
+import csvToJson, { CsvToJsonResultType } from '../../utils/csvToJson';
 
 export interface UploadFileProps {
-	onSelected?: (data: CsvToJsonResult) => void;
+	onSelected?: (data: CsvToJsonResultType) => void;
 }
 
 const UploadFile: FC<UploadFileProps> = ({ onSelected }) => {
 	const [data, setData] = useState<{
 		header: string[];
-		rows: Record<string, string>[];
+		rows: Record<string, unknown>[];
 	}>();
 
 	const [loading, setLoading] = useState(false);
@@ -46,8 +46,8 @@ const UploadFile: FC<UploadFileProps> = ({ onSelected }) => {
 	return (
 		<Card variant='outlined' sx={{ my: 2 }}>
 			<CardHeader
-				title='Tải file lên'
-				subheader='Chỉ hỗ trợ file .csv'
+				title='Upload file'
+				subheader='Only support .csv file'
 				action={[
 					<Button
 						key='upload-file-button'
@@ -55,7 +55,7 @@ const UploadFile: FC<UploadFileProps> = ({ onSelected }) => {
 						startIcon={<UploadFileOutlined />}
 						component='label'
 					>
-						Chọn file
+						Select file
 						<input
 							hidden
 							type='file'
@@ -64,7 +64,9 @@ const UploadFile: FC<UploadFileProps> = ({ onSelected }) => {
 						/>
 					</Button>,
 				]}
-				sx={{ borderBottom: '1px solid #ddd' }}
+				sx={{
+					borderBottom: '1px solid #ddd',
+				}}
 			/>
 
 			{loading && <LinearProgress variant='indeterminate' />}

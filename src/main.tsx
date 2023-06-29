@@ -8,6 +8,12 @@ const theme = createTheme({
 	shape: {
 		borderRadius: 20,
 	},
+	palette: {
+		primary: {
+			main: '#03045e',
+			contrastText: '#fff',
+		},
+	},
 });
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
