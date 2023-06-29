@@ -14,14 +14,16 @@ import {
 	TableRow,
 	Typography,
 } from '@mui/material';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 export interface SplitDataUIProps {
 	data?: CsvToJsonResultType;
 }
 
 const SplitDataUI: FC<SplitDataUIProps> = ({ data }) => {
-	const [columns, setColumns] = useState<string[]>(data?.header || []);
+	const [columns, setColumns] = useState<string[]>(() => {
+		return data?.header || [];
+	});
 
 	const dropColumn = (column: string) => {
 		setColumns((prev) => prev.filter((c) => c !== column));
@@ -30,6 +32,10 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data }) => {
 	const resetColumns = () => {
 		setColumns(data?.header || []);
 	};
+
+	useEffect(() => {
+		setColumns(data?.header || []);
+	}, [data]);
 
 	return (
 		<Card variant='outlined' sx={{ my: 2 }}>
