@@ -10,16 +10,20 @@ import {
 	CardContent,
 	CardHeader,
 	FormControl,
+	FormControlLabel,
 	FormHelperText,
 	Grid,
 	IconButton,
+	InputLabel,
 	MenuItem,
 	Select,
 	Stack,
+	Switch,
 	Table,
 	TableBody,
 	TableCell,
 	TableRow,
+	TextField,
 	Typography,
 } from '@mui/material';
 import { FC, useEffect, useState } from 'react';
@@ -35,6 +39,10 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data }) => {
 
 	const [targetColumn, setTargetColumn] = useState<string>();
 
+	const [testSize, setTestSize] = useState<number>(0.2);
+
+	const [random, setRandom] = useState<boolean>(false);
+
 	const dropColumn = (column: string) => {
 		setColumns((prev) => prev.filter((c) => c !== column));
 	};
@@ -47,7 +55,15 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data }) => {
 		setColumns(data?.header || []);
 	}, [data]);
 
-	const isValid = !!targetColumn;
+	useEffect(() => {
+		setTargetColumn(columns[columns.length - 1]);
+	}, [columns]);
+
+	const isValidTargetColumn = targetColumn && columns.includes(targetColumn);
+
+	const isValidTestSize = testSize && testSize >= 0 && testSize <= 1;
+
+	const isValid = isValidTargetColumn && isValidTestSize;
 
 	return (
 		<Card variant='outlined' sx={{ my: 2 }}>
@@ -114,11 +130,12 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data }) => {
 						<FormControl
 							fullWidth
 							size='small'
-							placeholder='Target column'
 							required
-							error={!targetColumn}
+							error={!isValidTargetColumn}
 						>
 							<Select
+								placeholder='Target column'
+								label='Target column'
 								value={targetColumn || ''}
 								onChange={(event) => {
 									setTargetColumn(
@@ -133,8 +150,11 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data }) => {
 								))}
 							</Select>
 
+							<InputLabel>Target column</InputLabel>
+
 							<FormHelperText>
-								{!targetColumn && 'Please select target column'}
+								{isValidTargetColumn &&
+									'Please select target column'}
 							</FormHelperText>
 						</FormControl>
 					</Grid>
@@ -144,7 +164,39 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data }) => {
 							Options
 						</Typography>
 
-						<Stack spacing={1}></Stack>
+						<Stack spacing={1}>
+							<TextField
+								error={!isValidTestSize}
+								helperText={
+									!isValidTestSize ? 'Invalid value' : ''
+								}
+								type='number'
+								size='small'
+								label='Test size'
+								placeholder='Test size'
+								inputProps={{
+									min: 0,
+									max: 1,
+								}}
+								required
+								value={testSize}
+								onChange={(event) => {
+									setTestSize(parseFloat(event.target.value));
+								}}
+							/>
+
+							<FormControlLabel
+								label='Random'
+								control={
+									<Switch
+										checked={random}
+										onChange={(event) => {
+											setRandom(event.target.checked);
+										}}
+									/>
+								}
+							/>
+						</Stack>
 					</Grid>
 				</Grid>
 			</CardContent>
