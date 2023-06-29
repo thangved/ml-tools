@@ -119,6 +119,7 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data }) => {
 							error={!targetColumn}
 						>
 							<Select
+								value={targetColumn || ''}
 								onChange={(event) => {
 									setTargetColumn(
 										event.target.value as string,
