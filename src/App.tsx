@@ -2,7 +2,7 @@ import UploadFile from '@/components/UploadFile';
 import { CsvToJsonResultType } from '@/utils/csvToJson';
 import { Container } from '@mui/material';
 import { useState } from 'react';
-import SplitDataUI from './components/SplitDataUI';
+import SplitDataUI from '@/components/SplitDataUI';
 
 function App() {
 	const [dataset, setDataset] = useState<CsvToJsonResultType | null>();
