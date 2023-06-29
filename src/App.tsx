@@ -1,5 +1,11 @@
+import { Container } from '@mui/material';
+
 function App() {
-	return <></>;
+	return (
+		<>
+			<Container></Container>
+		</>
+	);
 }
 
 export default App;
