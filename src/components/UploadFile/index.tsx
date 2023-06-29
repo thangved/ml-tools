@@ -46,8 +46,8 @@ const UploadFile: FC<UploadFileProps> = ({ onSelected }) => {
 	return (
 		<Card variant='outlined' sx={{ my: 2 }}>
 			<CardHeader
-				title='Tải file lên'
-				subheader='Chỉ hỗ trợ file .csv'
+				title='Upload file'
+				subheader='Only support .csv file'
 				action={[
 					<Button
 						key='upload-file-button'
@@ -55,7 +55,7 @@ const UploadFile: FC<UploadFileProps> = ({ onSelected }) => {
 						startIcon={<UploadFileOutlined />}
 						component='label'
 					>
-						Chọn file
+						Select file
 						<input
 							hidden
 							type='file'
