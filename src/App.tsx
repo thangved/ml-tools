@@ -12,7 +12,9 @@ function App() {
 			<Container>
 				<UploadFile onSelected={setDataset} />
 
-				{dataset && <SplitDataUI data={dataset} />}
+				{dataset && (
+					<SplitDataUI data={dataset} onSplited={console.log} />
+				)}
 			</Container>
 		</>
 	);

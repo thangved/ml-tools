@@ -17,7 +17,7 @@ export interface UploadFileProps {
 const UploadFile: FC<UploadFileProps> = ({ onSelected }) => {
 	const [data, setData] = useState<{
 		header: string[];
-		rows: Record<string, string>[];
+		rows: Record<string, unknown>[];
 	}>();
 
 	const [loading, setLoading] = useState(false);
@@ -64,7 +64,9 @@ const UploadFile: FC<UploadFileProps> = ({ onSelected }) => {
 						/>
 					</Button>,
 				]}
-				sx={{ borderBottom: '1px solid #ddd' }}
+				sx={{
+					borderBottom: '1px solid #ddd',
+				}}
 			/>
 
 			{loading && <LinearProgress variant='indeterminate' />}

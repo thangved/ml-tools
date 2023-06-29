@@ -35,5 +35,8 @@ export const WithData: Story = {
 				},
 			],
 		},
+		onSplited(data) {
+			console.log(data);
+		},
 	},
 };

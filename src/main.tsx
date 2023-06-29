@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client';
 
 const theme = createTheme({
 	shape: {
-		borderRadius: 10,
+		borderRadius: 20,
 	},
 });
 

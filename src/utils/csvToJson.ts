@@ -17,10 +17,10 @@ export default async function csvToJson(file: File) {
 	for (const row of data) {
 		const cells = row.split(',');
 
-		const obj: Record<string, string> = {};
+		const obj: Record<string, unknown> = {};
 
 		for (let i = 0; i < cells.length; i++) {
-			obj[header[i]] = cells[i];
+			obj[header[i]] = Number(cells[i]) || String(cells[i]) || cells[i];
 		}
 
 		result.push(obj);

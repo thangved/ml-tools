@@ -30,9 +30,17 @@ import { FC, useEffect, useState } from 'react';
 
 export interface SplitDataUIProps {
 	data?: CsvToJsonResultType;
+	onSplited?: (payload: {
+		xTrain: unknown[][];
+		xTest: unknown[][];
+		yTrain: unknown[];
+		yTest: unknown[];
+		columns: string[];
+		targetColumn: string;
+	}) => void;
 }
 
-const SplitDataUI: FC<SplitDataUIProps> = ({ data }) => {
+const SplitDataUI: FC<SplitDataUIProps> = ({ data, onSplited }) => {
 	const [columns, setColumns] = useState<string[]>(() => {
 		return data?.header || [];
 	});
@@ -65,17 +73,56 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data }) => {
 
 	const isValid = isValidTargetColumn && isValidTestSize;
 
+	const handleSplit = () => {
+		if (!isValid) {
+			return;
+		}
+
+		const targetColumnIndex = columns.indexOf(targetColumn as string);
+
+		const x = [];
+
+		for (const row of data?.rows || []) {
+			const xRow = [];
+
+			for (const key of columns) {
+				xRow.push(row[key]);
+			}
+
+			x.push(xRow);
+		}
+
+		const y = data?.rows.map((row) => {
+			return Object.values(row)[targetColumnIndex];
+		});
+
+		const trainSize = 1 - testSize;
+
+		const xTrain = x?.slice(0, Math.floor(x.length * trainSize)) || [];
+
+		const xTest = x?.slice(Math.floor(x.length * trainSize) + 1) || [];
+
+		const yTrain = y?.slice(0, Math.floor(y.length * trainSize)) || [];
+
+		const yTest = y?.slice(Math.floor(y.length * trainSize) + 1) || [];
+
+		onSplited?.({ xTrain, xTest, yTrain, yTest, columns, targetColumn });
+	};
+
 	return (
 		<Card variant='outlined' sx={{ my: 2 }}>
 			<CardHeader
 				title='Split Data'
-				sx={{ borderBottom: '1px solid #ddd' }}
+				sx={{
+					borderBottom: '1px solid #ddd',
+				}}
 				action={[
 					<Button
 						key='split-data-button'
 						variant='contained'
 						startIcon={<SplitscreenOutlined />}
 						disabled={!isValid}
+						onClick={handleSplit}
 					>
 						Split
 					</Button>,
@@ -99,27 +146,29 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data }) => {
 							</Button>
 						</Stack>
 
-						<Table size='small'>
-							<TableBody>
-								{columns.map((column) => (
-									<TableRow key={column}>
-										<TableCell sx={{ flex: 1 }}>
-											{column}
-										</TableCell>
+						<div style={{ maxHeight: 500, overflow: 'auto' }}>
+							<Table size='small'>
+								<TableBody>
+									{columns.map((column) => (
+										<TableRow key={column}>
+											<TableCell sx={{ flex: 1 }}>
+												{column}
+											</TableCell>
 
-										<TableCell sx={{ width: 50 }}>
-											<IconButton
-												onClick={() =>
-													dropColumn(column)
-												}
-											>
-												<DeleteOutline />
-											</IconButton>
-										</TableCell>
-									</TableRow>
-								))}
-							</TableBody>
-						</Table>
+											<TableCell sx={{ width: 50 }}>
+												<IconButton
+													onClick={() =>
+														dropColumn(column)
+													}
+												>
+													<DeleteOutline />
+												</IconButton>
+											</TableCell>
+										</TableRow>
+									))}
+								</TableBody>
+							</Table>
+						</div>
 					</Grid>
 
 					<Grid item xs={12} md={4}>
@@ -153,7 +202,7 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data }) => {
 							<InputLabel>Target column</InputLabel>
 
 							<FormHelperText>
-								{isValidTargetColumn &&
+								{!isValidTargetColumn &&
 									'Please select target column'}
 							</FormHelperText>
 						</FormControl>
