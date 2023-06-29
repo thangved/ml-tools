@@ -8,10 +8,10 @@ import {
 } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
 import { FC, ReactEventHandler, useCallback, useState } from 'react';
-import csvToJson, { CsvToJsonResult } from '../../utils/csvToJson';
+import csvToJson, { CsvToJsonResultType } from '../../utils/csvToJson';
 
 export interface UploadFileProps {
-	onSelected?: (data: CsvToJsonResult) => void;
+	onSelected?: (data: CsvToJsonResultType) => void;
 }
 
 const UploadFile: FC<UploadFileProps> = ({ onSelected }) => {

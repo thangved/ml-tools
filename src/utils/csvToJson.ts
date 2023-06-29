@@ -1,6 +1,6 @@
-export interface CsvToJsonResult {
+export interface CsvToJsonResultType {
 	header: string[];
-	rows: Record<string, string>[];
+	rows: Record<string, unknown>[];
 }
 
 export default async function csvToJson(file: File) {
