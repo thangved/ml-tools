@@ -1,12 +1,20 @@
 import { CsvToJsonResultType } from '@/utils/csvToJson';
-import { DeleteOutline, RefreshOutlined } from '@mui/icons-material';
+import {
+	DeleteOutline,
+	RefreshOutlined,
+	SplitscreenOutlined,
+} from '@mui/icons-material';
 import {
 	Button,
 	Card,
 	CardContent,
 	CardHeader,
+	FormControl,
+	FormHelperText,
 	Grid,
 	IconButton,
+	MenuItem,
+	Select,
 	Stack,
 	Table,
 	TableBody,
@@ -25,6 +33,8 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data }) => {
 		return data?.header || [];
 	});
 
+	const [targetColumn, setTargetColumn] = useState<string>();
+
 	const dropColumn = (column: string) => {
 		setColumns((prev) => prev.filter((c) => c !== column));
 	};
@@ -37,17 +47,31 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data }) => {
 		setColumns(data?.header || []);
 	}, [data]);
 
+	const isValid = !!targetColumn;
+
 	return (
 		<Card variant='outlined' sx={{ my: 2 }}>
 			<CardHeader
 				title='Split Data'
 				sx={{ borderBottom: '1px solid #ddd' }}
+				action={[
+					<Button
+						key='split-data-button'
+						variant='contained'
+						startIcon={<SplitscreenOutlined />}
+						disabled={!isValid}
+					>
+						Split
+					</Button>,
+				]}
 			/>
 
 			<CardContent>
 				<Grid container spacing={1}>
 					<Grid item xs={12} md={4}>
-						<Typography variant='h6'>Columns</Typography>
+						<Typography variant='h6' sx={{ mb: 2 }}>
+							Columns
+						</Typography>
 
 						<Stack justifyContent='end' direction='row' spacing={1}>
 							<Button
@@ -83,11 +107,43 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data }) => {
 					</Grid>
 
 					<Grid item xs={12} md={4}>
-						<Typography variant='h6'>Target column</Typography>
+						<Typography variant='h6' sx={{ mb: 2 }}>
+							Target column
+						</Typography>
+
+						<FormControl
+							fullWidth
+							size='small'
+							placeholder='Target column'
+							required
+							error={!targetColumn}
+						>
+							<Select
+								onChange={(event) => {
+									setTargetColumn(
+										event.target.value as string,
+									);
+								}}
+							>
+								{columns.map((column) => (
+									<MenuItem key={column} value={column}>
+										{column}
+									</MenuItem>
+								))}
+							</Select>
+
+							<FormHelperText>
+								{!targetColumn && 'Please select target column'}
+							</FormHelperText>
+						</FormControl>
 					</Grid>
 
 					<Grid item xs={12} md={4}>
-						<Typography variant='h6'>Options</Typography>
+						<Typography variant='h6' sx={{ mb: 2 }}>
+							Options
+						</Typography>
+
+						<Stack spacing={1}></Stack>
 					</Grid>
 				</Grid>
 			</CardContent>

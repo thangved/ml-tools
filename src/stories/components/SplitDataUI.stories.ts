@@ -14,6 +14,10 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+	args: {},
+};
+
+export const WithData: Story = {
 	args: {
 		data: {
 			header: ['name', 'age', 'gender', 'country'],
