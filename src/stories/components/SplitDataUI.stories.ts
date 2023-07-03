@@ -1,12 +1,16 @@
+import SplitDataUI from '@/components/SplitDataUI';
 import type { Meta, StoryObj } from '@storybook/react';
-
-import SplitDataUI from '../../components/SplitDataUI';
 
 const meta = {
 	title: 'Components/SplitDataUI',
 	component: SplitDataUI,
 	tags: ['autodocs'],
-	argTypes: {},
+	argTypes: {
+		onSplited: {
+			type: 'function',
+			action: 'splited',
+		},
+	},
 } satisfies Meta<typeof SplitDataUI>;
 
 export default meta;

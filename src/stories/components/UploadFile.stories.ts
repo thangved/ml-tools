@@ -1,12 +1,16 @@
+import UploadFile from '@/components/UploadFile';
 import type { Meta, StoryObj } from '@storybook/react';
-
-import UploadFile from '../../components/UploadFile';
 
 const meta = {
 	title: 'Components/UploadFile',
 	component: UploadFile,
 	tags: ['autodocs'],
-	argTypes: {},
+	argTypes: {
+		onSelected: {
+			type: 'function',
+			action: 'selected',
+		},
+	},
 } satisfies Meta<typeof UploadFile>;
 
 export default meta;

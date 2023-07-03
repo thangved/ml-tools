@@ -1,20 +1,9 @@
 import App from '@/App.tsx';
 import '@/index.css';
-import { ThemeProvider, createTheme } from '@mui/material';
+import { ThemeProvider } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
-const theme = createTheme({
-	shape: {
-		borderRadius: 20,
-	},
-	palette: {
-		primary: {
-			main: '#03045e',
-			contrastText: '#fff',
-		},
-	},
-});
+import theme from './theme';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
