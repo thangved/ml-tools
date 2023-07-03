@@ -1,6 +1,5 @@
+import App from '@/App';
 import type { Meta, StoryObj } from '@storybook/react';
-
-import App from '../../App';
 
 const meta = {
 	title: 'Exampled/App',
@@ -14,4 +13,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	args: {},
+	parameters: {
+		controls: { hideNoControlsWarning: true },
+	},
 };
