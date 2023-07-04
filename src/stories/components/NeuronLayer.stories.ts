@@ -30,3 +30,11 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	args: {},
 };
+
+export const WithData: Story = {
+	args: {
+		activationFunction: 'relu',
+		neuronCount: 10,
+		layerName: 'Layer 2',
+	},
+};
