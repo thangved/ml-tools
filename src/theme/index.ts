@@ -16,6 +16,11 @@ const theme = createTheme({
 				variant: 'outlined',
 			},
 		},
+		MuiInput: {
+			defaultProps: {
+				fullWidth: true,
+			},
+		},
 	},
 });
 
