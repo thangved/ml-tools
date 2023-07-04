@@ -1,6 +1,17 @@
-import { AddOutlined } from '@mui/icons-material';
-import { Button, Card, CardContent, CardHeader, Stack } from '@mui/material';
-import { useState } from 'react';
+import { AddBoxOutlined, AddOutlined } from '@mui/icons-material';
+import {
+	Button,
+	Card,
+	CardActions,
+	CardContent,
+	CardHeader,
+	FormControl,
+	InputLabel,
+	MenuItem,
+	Select,
+	Stack,
+} from '@mui/material';
+import { FC, useState } from 'react';
 import NeuronLayer, { ActivationFunction } from '../NeuronLayer';
 
 export interface NeuronLayerType {
@@ -8,8 +19,19 @@ export interface NeuronLayerType {
 	activation: ActivationFunction;
 }
 
-const CreateModel = () => {
+export type ProblemType = 'classification' | 'regression';
+
+export interface CreateModelProps {
+	onSubmit: (payload: {
+		layers: NeuronLayerType[];
+		problemType: ProblemType;
+	}) => void;
+}
+
+const CreateModel: FC<CreateModelProps> = ({ onSubmit }) => {
 	const [layers, setLayers] = useState<NeuronLayerType[]>([]);
+	const [problemType, setProblemType] =
+		useState<ProblemType>('classification');
 
 	const addLayer = () => {
 		setLayers([...layers, { neurons: 1, activation: 'sigmoid' }]);
@@ -29,7 +51,30 @@ const CreateModel = () => {
 
 	return (
 		<Card>
-			<CardHeader title='Layers' />
+			<CardHeader
+				title='Layers'
+				action={[
+					<FormControl size='small' key='problem-type'>
+						<InputLabel>Problem type</InputLabel>
+
+						<Select
+							label='Problem type'
+							value={problemType}
+							onChange={(event) => {
+								setProblemType(
+									event.target.value as ProblemType,
+								);
+							}}
+						>
+							<MenuItem value='classification'>
+								Classification
+							</MenuItem>
+
+							<MenuItem value='regression'>Regression</MenuItem>
+						</Select>
+					</FormControl>,
+				]}
+			/>
 
 			<CardContent sx={{ background: '#00000010' }}>
 				<Stack spacing={1}>
@@ -53,7 +98,6 @@ const CreateModel = () => {
 					))}
 
 					<Button
-						variant='contained'
 						size='small'
 						startIcon={<AddOutlined />}
 						fullWidth
@@ -63,6 +107,23 @@ const CreateModel = () => {
 					</Button>
 				</Stack>
 			</CardContent>
+
+			<CardActions>
+				<Button
+					fullWidth
+					variant='outlined'
+					startIcon={<AddBoxOutlined />}
+					size='small'
+					onClick={() =>
+						onSubmit({
+							layers,
+							problemType,
+						})
+					}
+				>
+					Submit
+				</Button>
+			</CardActions>
 		</Card>
 	);
 };

@@ -5,7 +5,11 @@ const meta = {
 	title: 'Components/CreateModel',
 	component: CreateModel,
 	tags: ['autodocs'],
-	argTypes: {},
+	argTypes: {
+		onSubmit: {
+			type: 'function',
+		},
+	},
 } satisfies Meta<typeof CreateModel>;
 
 export default meta;
