@@ -15,13 +15,10 @@ const meta = {
 		layerName: {
 			type: 'string',
 		},
-		onActivationFunctionChange: {
-			type: 'function',
-		},
-		onNeuronCountChange: {
-			type: 'function',
-		},
 		onDeleteLayer: {
+			type: 'function',
+		},
+		onUpdateLayer: {
 			type: 'function',
 		},
 	},
