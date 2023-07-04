@@ -10,6 +10,7 @@ const meta = {
 			type: 'function',
 			action: 'splited',
 		},
+		data: {},
 	},
 } satisfies Meta<typeof SplitDataUI>;
 
