@@ -19,10 +19,10 @@ export interface NeuronLayerProps {
 	layerName?: string;
 	neuronCount?: number;
 	activationFunction?: ActivationFunction;
-	onNeuronCountChange?: (neuronCount: number) => void;
-	onActivationFunctionChange?: (
-		activationFunction: ActivationFunction,
-	) => void;
+	onUpdateLayer?: (payload: {
+		neuronCount?: number;
+		activationFunction?: ActivationFunction;
+	}) => void;
 	onDeleteLayer?: () => void;
 }
 
@@ -30,24 +30,14 @@ const defaultNeuronLayerProps: NeuronLayerProps = {
 	layerName: 'Layer 1',
 	neuronCount: 1,
 	activationFunction: 'sigmoid',
-	onNeuronCountChange: () => {
-		// do nothing
-	},
-	onActivationFunctionChange: () => {
-		// do nothing
-	},
-	onDeleteLayer: () => {
-		// do nothing
-	},
 };
 
 const NeuronLayer: FC<NeuronLayerProps> = ({
 	layerName = defaultNeuronLayerProps.layerName,
 	neuronCount = defaultNeuronLayerProps.neuronCount,
 	activationFunction = defaultNeuronLayerProps.activationFunction,
-	onNeuronCountChange = defaultNeuronLayerProps.onNeuronCountChange,
-	onActivationFunctionChange = defaultNeuronLayerProps.onActivationFunctionChange,
-	onDeleteLayer = defaultNeuronLayerProps.onDeleteLayer,
+	onDeleteLayer,
+	onUpdateLayer,
 }) => {
 	return (
 		<Card>
@@ -75,10 +65,11 @@ const NeuronLayer: FC<NeuronLayerProps> = ({
 								placeholder='Activation function'
 								value={activationFunction}
 								onChange={(event) => {
-									onActivationFunctionChange?.(
-										event.target
+									onUpdateLayer?.({
+										activationFunction: event.target
 											.value as ActivationFunction,
-									);
+										neuronCount,
+									});
 								}}
 							>
 								<MenuItem value='sigmoid'>Sigmoid</MenuItem>
@@ -98,9 +89,10 @@ const NeuronLayer: FC<NeuronLayerProps> = ({
 							placeholder='Neurons'
 							value={neuronCount}
 							onChange={(event) => {
-								onNeuronCountChange?.(
-									parseInt(event.target.value),
-								);
+								onUpdateLayer?.({
+									activationFunction,
+									neuronCount: Number(event.target.value),
+								});
 							}}
 						/>
 					</Grid>
