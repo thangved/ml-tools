@@ -10,6 +10,13 @@ const theme = createTheme({
 			contrastText: '#fff',
 		},
 	},
+	components: {
+		MuiCard: {
+			defaultProps: {
+				variant: 'outlined',
+			},
+		},
+	},
 });
 
 export default theme;

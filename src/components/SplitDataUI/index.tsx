@@ -110,7 +110,7 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data, onSplited }) => {
 	};
 
 	return (
-		<Card variant='outlined' sx={{ my: 2 }}>
+		<Card sx={{ my: 2 }}>
 			<CardHeader
 				title='Split Data'
 				sx={{
