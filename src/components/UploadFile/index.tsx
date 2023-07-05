@@ -44,7 +44,7 @@ const UploadFile: FC<UploadFileProps> = ({ onSelected }) => {
 	);
 
 	return (
-		<Card sx={{ my: 2 }}>
+		<Card>
 			<CardHeader
 				title='Upload file'
 				subheader='Only support .csv file'

@@ -12,7 +12,8 @@ import {
 	Stack,
 } from '@mui/material';
 import { FC, useState } from 'react';
-import NeuronLayer, { ActivationFunction } from '../NeuronLayer';
+import type { ActivationFunction } from '../NeuronLayer';
+import NeuronLayer from '../NeuronLayer';
 
 export interface NeuronLayerType {
 	neurons: number;

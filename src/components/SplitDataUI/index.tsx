@@ -1,4 +1,4 @@
-import { CsvToJsonResultType } from '@/utils/csvToJson';
+import type { CsvToJsonResultType } from '@/utils/csvToJson';
 import {
 	DeleteOutline,
 	RefreshOutlined,
@@ -26,7 +26,8 @@ import {
 	TextField,
 	Typography,
 } from '@mui/material';
-import { FC, useEffect, useState } from 'react';
+import type { FC } from 'react';
+import { useEffect, useState } from 'react';
 
 export interface SplitDataUIProps {
 	data?: CsvToJsonResultType;
@@ -86,6 +87,8 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data, onSplited }) => {
 			const xRow = [];
 
 			for (const key of columns) {
+				if (key === targetColumn) continue;
+
 				xRow.push(row[key]);
 			}
 
@@ -110,7 +113,7 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data, onSplited }) => {
 	};
 
 	return (
-		<Card sx={{ my: 2 }}>
+		<Card>
 			<CardHeader
 				title='Split Data'
 				sx={{
