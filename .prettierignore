@@ -25,4 +25,3 @@ dist-ssr
 
 .nyc_output
 storybook-static
-coverage
