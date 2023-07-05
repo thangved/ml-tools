@@ -1,4 +1,4 @@
-import { AddBoxOutlined, AddOutlined } from '@mui/icons-material';
+import { AddOutlined, AutoFixHighOutlined } from '@mui/icons-material';
 import {
 	Button,
 	Card,
@@ -76,7 +76,7 @@ const CreateModel: FC<CreateModelProps> = ({ onSubmit }) => {
 				]}
 			/>
 
-			<CardContent sx={{ background: '#00000010' }}>
+			<CardContent sx={{ background: '#00000010', p: 10 }}>
 				<Stack spacing={1}>
 					{layers.map((layer, index) => (
 						<NeuronLayer
@@ -112,7 +112,7 @@ const CreateModel: FC<CreateModelProps> = ({ onSubmit }) => {
 				<Button
 					fullWidth
 					variant='outlined'
-					startIcon={<AddBoxOutlined />}
+					startIcon={<AutoFixHighOutlined />}
 					size='small'
 					onClick={() =>
 						onSubmit({
