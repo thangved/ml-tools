@@ -23,7 +23,7 @@ function App() {
 
 	return (
 		<>
-			<Container sx={{ my: 2 }}>
+			<Container sx={{ py: 2 }}>
 				<Stack spacing={2}>
 					<UploadFile onSelected={setDataset} />
 

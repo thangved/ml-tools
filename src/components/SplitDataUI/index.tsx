@@ -87,6 +87,8 @@ const SplitDataUI: FC<SplitDataUIProps> = ({ data, onSplited }) => {
 			const xRow = [];
 
 			for (const key of columns) {
+				if (key === targetColumn) continue;
+
 				xRow.push(row[key]);
 			}
 
