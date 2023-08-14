@@ -20,7 +20,7 @@
 		"@emotion/styled": "^11.11.0",
 		"@fontsource/roboto": "^5.0.3",
 		"@mui/icons-material": "^5.14.0",
-		"@mui/material": "^5.14.3",
+		"@mui/material": "^5.14.4",
 		"@mui/x-data-grid": "^6.9.0",
 		"@tensorflow/tfjs": "^4.8.0",
 		"apexcharts": "^3.41.0",
