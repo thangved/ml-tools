@@ -22,7 +22,7 @@ dependencies:
     version: 5.14.5(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
   '@mui/x-data-grid':
     specifier: ^6.11.1
-    version: 6.11.1(@mui/material@5.14.5)(@mui/system@5.14.3)(react-dom@18.2.0)(react@18.2.0)
+    version: 6.11.1(@mui/material@5.14.5)(@mui/system@5.14.5)(react-dom@18.2.0)(react@18.2.0)
   '@tensorflow/tfjs':
     specifier: ^4.10.0
     version: 4.10.0(seedrandom@3.0.5)
@@ -56,8 +56,8 @@ devDependencies:
     specifier: 7.0.24
     version: 7.0.24(react-dom@18.2.0)(react@18.2.0)
   '@storybook/blocks':
-    specifier: 7.2.1
-    version: 7.2.1(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
+    specifier: 7.3.2
+    version: 7.3.2(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
   '@storybook/jest':
     specifier: ^0.1.0
     version: 0.1.0
@@ -2723,23 +2723,6 @@ packages:
       react-transition-group: 4.4.5(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
-  /@mui/private-theming@5.13.7(@types/react@18.2.20)(react@18.2.0):
-    resolution: {integrity: sha512-qbSr+udcij5F9dKhGX7fEdx2drXchq7htLNr2Qg2Ma+WJ6q0ERlEqGSBiPiVDJkptcjeVL4DGmcf1wl5+vD4EA==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      '@types/react': ^17.0.0 || ^18.0.0
-      react: ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.22.6
-      '@mui/utils': 5.14.3(react@18.2.0)
-      '@types/react': 18.2.20
-      prop-types: 15.8.1
-      react: 18.2.0
-    dev: false
-
   /@mui/private-theming@5.14.5(@types/react@18.2.20)(react@18.2.0):
     resolution: {integrity: sha512-cC4C5RrpXpDaaZyH9QwmPhRLgz+f2SYbOty3cPkk4qPSOSfif2ZEcDD9HTENKDDd9deB+xkPKzzZhi8cxIx8Ig==}
     engines: {node: '>=12.0.0'}
@@ -2774,36 +2757,6 @@ packages:
       '@emotion/cache': 11.11.0
       '@emotion/react': 11.11.1(@types/react@18.2.20)(react@18.2.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.20)(react@18.2.0)
-      csstype: 3.1.2
-      prop-types: 15.8.1
-      react: 18.2.0
-    dev: false
-
-  /@mui/system@5.14.3(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.20)(react@18.2.0):
-    resolution: {integrity: sha512-b+C+j9+75+/iIYSa+1S4eCMc9MDNrj9hzWfExJqS2GffuNocRagjBZFyjtMqsLWLxMxQIX8Cg6j0hAioiw+WfQ==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      '@emotion/react': ^11.5.0
-      '@emotion/styled': ^11.3.0
-      '@types/react': ^17.0.0 || ^18.0.0
-      react: ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      '@emotion/react':
-        optional: true
-      '@emotion/styled':
-        optional: true
-      '@types/react':
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.22.6
-      '@emotion/react': 11.11.1(@types/react@18.2.20)(react@18.2.0)
-      '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.20)(react@18.2.0)
-      '@mui/private-theming': 5.13.7(@types/react@18.2.20)(react@18.2.0)
-      '@mui/styled-engine': 5.13.2(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0)
-      '@mui/types': 7.2.4(@types/react@18.2.20)
-      '@mui/utils': 5.14.3(react@18.2.0)
-      '@types/react': 18.2.20
-      clsx: 2.0.0
       csstype: 3.1.2
       prop-types: 15.8.1
       react: 18.2.0
@@ -2878,7 +2831,7 @@ packages:
       react-is: 18.2.0
     dev: false
 
-  /@mui/x-data-grid@6.11.1(@mui/material@5.14.5)(@mui/system@5.14.3)(react-dom@18.2.0)(react@18.2.0):
+  /@mui/x-data-grid@6.11.1(@mui/material@5.14.5)(@mui/system@5.14.5)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-qFyuf6R/JOG46Y62scwH0C7s+xVqfRFU/gv4rUWS9m+EYsabAXTx/g+Mq2t+ZGdaaGZlrpKDavr2PwitbpTMaw==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -2889,7 +2842,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.22.6
       '@mui/material': 5.14.5(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
-      '@mui/system': 5.14.3(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.20)(react@18.2.0)
+      '@mui/system': 5.14.5(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.20)(react@18.2.0)
       '@mui/utils': 5.14.3(react@18.2.0)
       clsx: 2.0.0
       prop-types: 15.8.1
@@ -3912,44 +3865,6 @@ packages:
       - '@types/react-dom'
     dev: true
 
-  /@storybook/blocks@7.2.1(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-1fPsFC6n9R267KwxGHiL80OuIdMDRC9QuIW4sRF0tF/G/yvucbofySYRQl/Y8LjsMJq8D4NpG5xLsneSxMP5cg==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      '@storybook/channels': 7.2.1
-      '@storybook/client-logger': 7.2.1
-      '@storybook/components': 7.2.1(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/core-events': 7.2.1
-      '@storybook/csf': 0.1.1
-      '@storybook/docs-tools': 7.2.1
-      '@storybook/global': 5.0.0
-      '@storybook/manager-api': 7.2.1(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/preview-api': 7.2.1
-      '@storybook/theming': 7.2.1(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/types': 7.2.1
-      '@types/lodash': 4.14.195
-      color-convert: 2.0.1
-      dequal: 2.0.3
-      lodash: 4.17.21
-      markdown-to-jsx: 7.2.1(react@18.2.0)
-      memoizerific: 1.11.3
-      polished: 4.2.2
-      react: 18.2.0
-      react-colorful: 5.6.1(react-dom@18.2.0)(react@18.2.0)
-      react-dom: 18.2.0(react@18.2.0)
-      telejson: 7.1.0
-      tocbot: 4.21.0
-      ts-dedent: 2.2.0
-      util-deprecate: 1.0.2
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-dom'
-      - encoding
-      - supports-color
-    dev: true
-
   /@storybook/blocks@7.3.2(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-j/PRnvGLn0Y3VAu/t6RrU7pjenb7II7Cl/SnFW8LzjMBKXBrkFaq8BRbglzDAUtGdAa9HmJBosogenoZ9iWoBw==}
     peerDependencies:
@@ -4263,7 +4178,7 @@ packages:
       '@storybook/client-logger': 7.2.1
       '@storybook/csf': 0.1.1
       '@storybook/global': 5.0.0
-      '@storybook/icons': 1.1.5(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/icons': 1.1.6(react-dom@18.2.0)(react@18.2.0)
       '@storybook/theming': 7.2.1(react-dom@18.2.0)(react@18.2.0)
       '@storybook/types': 7.2.1
       memoizerific: 1.11.3
@@ -4633,20 +4548,6 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/docs-tools@7.2.1:
-    resolution: {integrity: sha512-snRdkqdaxAwlalIEtuElySzC68Lo/0KfrGRR6xSDxWIhjAPNqsRLPHEXlZrJ43Tn/V2oxCRU8eb21pP5/58krw==}
-    dependencies:
-      '@storybook/core-common': 7.2.1
-      '@storybook/preview-api': 7.2.1
-      '@storybook/types': 7.2.1
-      '@types/doctrine': 0.0.3
-      doctrine: 3.0.0
-      lodash: 4.17.21
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-    dev: true
-
   /@storybook/docs-tools@7.3.2:
     resolution: {integrity: sha512-MSmAiL/lg+B14CIKD6DvkBPdTDfGBSSt3bE+vW2uW9ohNJB5eWePZLQZUe34uZuunn3uqyTAgbEF7KjrtGZ/MQ==}
     dependencies:
@@ -4669,17 +4570,6 @@ packages:
 
   /@storybook/global@5.0.0:
     resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
-    dev: true
-
-  /@storybook/icons@1.1.5(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-PWJIaa/NtOu2VSWnj07evF1OI5+6H7ZTAvy0LO38RheW4W8iS+xoYsh2cr/nxLBblfhbw533uJrhdqpxCytxfA==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
     dev: true
 
   /@storybook/icons@1.1.6(react-dom@18.2.0)(react@18.2.0):
