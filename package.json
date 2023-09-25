@@ -51,7 +51,7 @@
 		"eslint-plugin-react-refresh": "^0.4.3",
 		"eslint-plugin-storybook": "^0.6.13",
 		"husky": "^8.0.3",
-		"prettier": "^3.0.1",
+		"prettier": "^3.0.3",
 		"prop-types": "15.8.1",
 		"storybook": "7.2.1",
 		"typescript": "^5.1.6",
