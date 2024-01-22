@@ -22,10 +22,10 @@ dependencies:
     version: 5.15.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
   '@mui/x-data-grid':
     specifier: ^6.12.0
-    version: 6.12.0(@mui/material@5.15.0)(@mui/system@5.14.5)(react-dom@18.2.0)(react@18.2.0)
+    version: 6.12.0(@mui/material@5.15.0)(@mui/system@5.15.0)(react-dom@18.2.0)(react@18.2.0)
   '@tensorflow/tfjs':
-    specifier: ^4.10.0
-    version: 4.10.0(seedrandom@3.0.5)
+    specifier: ^4.16.0
+    version: 4.16.0(seedrandom@3.0.5)
   apexcharts:
     specifier: ^3.41.0
     version: 3.41.0
@@ -2681,23 +2681,6 @@ packages:
       react-transition-group: 4.4.5(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
-  /@mui/private-theming@5.14.5(@types/react@18.2.20)(react@18.2.0):
-    resolution: {integrity: sha512-cC4C5RrpXpDaaZyH9QwmPhRLgz+f2SYbOty3cPkk4qPSOSfif2ZEcDD9HTENKDDd9deB+xkPKzzZhi8cxIx8Ig==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      '@types/react': ^17.0.0 || ^18.0.0
-      react: ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.22.11
-      '@mui/utils': 5.14.5(react@18.2.0)
-      '@types/react': 18.2.20
-      prop-types: 15.8.1
-      react: 18.2.0
-    dev: false
-
   /@mui/private-theming@5.15.0(@types/react@18.2.20)(react@18.2.0):
     resolution: {integrity: sha512-7WxtIhXxNek0JjtsYy+ut2LtFSLpsUW5JSDehQO+jF7itJ8ehy7Bd9bSt2yIllbwGjCFowLfYpPk2Ykgvqm1tA==}
     engines: {node: '>=12.0.0'}
@@ -2711,28 +2694,6 @@ packages:
       '@babel/runtime': 7.23.6
       '@mui/utils': 5.15.0(@types/react@18.2.20)(react@18.2.0)
       '@types/react': 18.2.20
-      prop-types: 15.8.1
-      react: 18.2.0
-    dev: false
-
-  /@mui/styled-engine@5.13.2(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0):
-    resolution: {integrity: sha512-VCYCU6xVtXOrIN8lcbuPmoG+u7FYuOERG++fpY74hPpEWkyFQG97F+/XfTQVYzlR2m7nPjnwVUgATcTCMEaMvw==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      '@emotion/react': ^11.4.1
-      '@emotion/styled': ^11.3.0
-      react: ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      '@emotion/react':
-        optional: true
-      '@emotion/styled':
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.22.11
-      '@emotion/cache': 11.11.0
-      '@emotion/react': 11.11.1(@types/react@18.2.20)(react@18.2.0)
-      '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.20)(react@18.2.0)
-      csstype: 3.1.2
       prop-types: 15.8.1
       react: 18.2.0
     dev: false
@@ -2754,36 +2715,6 @@ packages:
       '@emotion/cache': 11.11.0
       '@emotion/react': 11.11.1(@types/react@18.2.20)(react@18.2.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.20)(react@18.2.0)
-      csstype: 3.1.2
-      prop-types: 15.8.1
-      react: 18.2.0
-    dev: false
-
-  /@mui/system@5.14.5(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.20)(react@18.2.0):
-    resolution: {integrity: sha512-mextXZHDeGcR7E1kx43TRARrVXy+gI4wzpUgNv7MqZs1dvTVXQGVeAT6ydj9d6FUqHBPMNLGV/21vJOrpqsL+w==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      '@emotion/react': ^11.5.0
-      '@emotion/styled': ^11.3.0
-      '@types/react': ^17.0.0 || ^18.0.0
-      react: ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      '@emotion/react':
-        optional: true
-      '@emotion/styled':
-        optional: true
-      '@types/react':
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.22.11
-      '@emotion/react': 11.11.1(@types/react@18.2.20)(react@18.2.0)
-      '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.20)(react@18.2.0)
-      '@mui/private-theming': 5.14.5(@types/react@18.2.20)(react@18.2.0)
-      '@mui/styled-engine': 5.13.2(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0)
-      '@mui/types': 7.2.4(@types/react@18.2.20)
-      '@mui/utils': 5.14.5(react@18.2.0)
-      '@types/react': 18.2.20
-      clsx: 2.0.0
       csstype: 3.1.2
       prop-types: 15.8.1
       react: 18.2.0
@@ -2830,17 +2761,6 @@ packages:
       '@types/react': 18.2.20
     dev: false
 
-  /@mui/types@7.2.4(@types/react@18.2.20):
-    resolution: {integrity: sha512-LBcwa8rN84bKF+f5sDyku42w1NTxaPgPyYKODsh01U1fVstTClbUoSA96oyRBnSNyEiAVjKm6Gwx9vjR+xyqHA==}
-    peerDependencies:
-      '@types/react': '*'
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-    dependencies:
-      '@types/react': 18.2.20
-    dev: false
-
   /@mui/utils@5.14.5(react@18.2.0):
     resolution: {integrity: sha512-6Hzw63VR9C5xYv+CbjndoRLU6Gntal8rJ5W+GUzkyHrGWIyYPWZPa6AevnyGioySNETATe1H9oXS8f/7qgIHJA==}
     engines: {node: '>=12.0.0'}
@@ -2873,7 +2793,7 @@ packages:
       react-is: 18.2.0
     dev: false
 
-  /@mui/x-data-grid@6.12.0(@mui/material@5.15.0)(@mui/system@5.14.5)(react-dom@18.2.0)(react@18.2.0):
+  /@mui/x-data-grid@6.12.0(@mui/material@5.15.0)(@mui/system@5.15.0)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-ZuQ8Uq/dF6gjrE/qU6VvP3tgy9n78DdCMD6hbXy/uDIoddJ4J8hSn9S6flnFnFQbRZzF/Q/pPWXZTR4oeg8NQg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -2884,7 +2804,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.22.11
       '@mui/material': 5.15.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
-      '@mui/system': 5.14.5(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.20)(react@18.2.0)
+      '@mui/system': 5.15.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.20)(react@18.2.0)
       '@mui/utils': 5.14.5(react@18.2.0)
       clsx: 2.0.0
       prop-types: 15.8.1
@@ -5564,46 +5484,46 @@ packages:
       jsonc-parser: 3.2.0
     dev: true
 
-  /@tensorflow/tfjs-backend-cpu@4.10.0(@tensorflow/tfjs-core@4.10.0):
-    resolution: {integrity: sha512-w3f0ORR1smSpkW7om2yQVunRYMjyqWcEbWCPirR1DQ6ImgW+VWqmM2oVPQXRsFYpwg1g6bk2Jp5COafpPA+krw==}
+  /@tensorflow/tfjs-backend-cpu@4.16.0(@tensorflow/tfjs-core@4.16.0):
+    resolution: {integrity: sha512-bQFu7FTUgqgss1AwnqSwQ1f02IPrfLLc2lLn5pyyVrS6Ex7zA6Y4YkfktqoJSRE6LlRZv3vxSriUGE1avRe4qQ==}
     engines: {yarn: '>= 1.3.2'}
     peerDependencies:
-      '@tensorflow/tfjs-core': 4.10.0
+      '@tensorflow/tfjs-core': 4.16.0
     dependencies:
-      '@tensorflow/tfjs-core': 4.10.0
+      '@tensorflow/tfjs-core': 4.16.0
       '@types/seedrandom': 2.4.30
       seedrandom: 3.0.5
     dev: false
 
-  /@tensorflow/tfjs-backend-webgl@4.10.0(@tensorflow/tfjs-core@4.10.0):
-    resolution: {integrity: sha512-Vzl/pyXHa9TgFaRJGspExjZVDKgkKvLxOkPaH+psE2LPnQkiH/IOPO7HKO0U3+hZql977BIiZdHc6HNprFS3/A==}
+  /@tensorflow/tfjs-backend-webgl@4.16.0(@tensorflow/tfjs-core@4.16.0):
+    resolution: {integrity: sha512-cIGZWuY892iwTRokbDj3qsLi0AlpQn+U7rzB1mddhHrWr9kBXrrnAvIq0h2aiFzRFNePWUcsbgK+HmYG32kosg==}
     engines: {yarn: '>= 1.3.2'}
     peerDependencies:
-      '@tensorflow/tfjs-core': 4.10.0
+      '@tensorflow/tfjs-core': 4.16.0
     dependencies:
-      '@tensorflow/tfjs-backend-cpu': 4.10.0(@tensorflow/tfjs-core@4.10.0)
-      '@tensorflow/tfjs-core': 4.10.0
+      '@tensorflow/tfjs-backend-cpu': 4.16.0(@tensorflow/tfjs-core@4.16.0)
+      '@tensorflow/tfjs-core': 4.16.0
       '@types/offscreencanvas': 2019.3.0
       '@types/seedrandom': 2.4.30
       seedrandom: 3.0.5
     dev: false
 
-  /@tensorflow/tfjs-converter@4.10.0(@tensorflow/tfjs-core@4.10.0):
-    resolution: {integrity: sha512-ffLpK+ismdmiDcoTID2aidP3/uJYyQPjmKdRZ3hBUkrczy7pQIcCW8blIR9Gk20htB4OLQMf74ZxbpfdQ9nYeQ==}
+  /@tensorflow/tfjs-converter@4.16.0(@tensorflow/tfjs-core@4.16.0):
+    resolution: {integrity: sha512-gd8dHl9tqEPQOHZLAUza713nKr42rpvUXrtm7yUhk10THvJT6TXe9Q2AJKmni8J3vfR+ghsCh77F8D4RbShx1Q==}
     peerDependencies:
-      '@tensorflow/tfjs-core': 4.10.0
+      '@tensorflow/tfjs-core': 4.16.0
     dependencies:
-      '@tensorflow/tfjs-core': 4.10.0
+      '@tensorflow/tfjs-core': 4.16.0
     dev: false
 
-  /@tensorflow/tfjs-core@4.10.0:
-    resolution: {integrity: sha512-klc6lUTYRbHQLEFnVKtTICNK+WUlduUcrlXsDs6ixKAOJzLAlIR2JnmJICt2AT2Rxwu0Zj2bAYojSxgcIcUUxA==}
+  /@tensorflow/tfjs-core@4.16.0:
+    resolution: {integrity: sha512-MarAtO+Up6wA8pI9QDpQOwwJgb/imYMN++tsoaalyOEE9+B5HS4lQldxDJKXO8Frf4DyXf4FItJktEXaiPfRHw==}
     engines: {yarn: '>= 1.3.2'}
     dependencies:
       '@types/long': 4.0.2
       '@types/offscreencanvas': 2019.7.0
       '@types/seedrandom': 2.4.30
-      '@webgpu/types': 0.1.30
+      '@webgpu/types': 0.1.38
       long: 4.0.0
       node-fetch: 2.6.11
       seedrandom: 3.0.5
@@ -5611,13 +5531,13 @@ packages:
       - encoding
     dev: false
 
-  /@tensorflow/tfjs-data@4.10.0(@tensorflow/tfjs-core@4.10.0)(seedrandom@3.0.5):
-    resolution: {integrity: sha512-71rQ6xSipXdClKja705jrWZkH9ostAYuVZlf7nW2AJXUCzhrGsJAkcHag4m568mDFoAqfQQTBy4Gk26h0/Y+Pg==}
+  /@tensorflow/tfjs-data@4.16.0(@tensorflow/tfjs-core@4.16.0)(seedrandom@3.0.5):
+    resolution: {integrity: sha512-HAmB4/3mvR1t/fuxu4Vx7hEGb4w8EcJoPNlzRHLr0+cYOApii6HQ/OksCcp7Ll8JoCb/SruVR3En3WSjSUu8YQ==}
     peerDependencies:
-      '@tensorflow/tfjs-core': 4.10.0
+      '@tensorflow/tfjs-core': 4.16.0
       seedrandom: ^3.0.5
     dependencies:
-      '@tensorflow/tfjs-core': 4.10.0
+      '@tensorflow/tfjs-core': 4.16.0
       '@types/node-fetch': 2.6.4
       node-fetch: 2.6.11
       seedrandom: 3.0.5
@@ -5626,24 +5546,24 @@ packages:
       - encoding
     dev: false
 
-  /@tensorflow/tfjs-layers@4.10.0(@tensorflow/tfjs-core@4.10.0):
-    resolution: {integrity: sha512-SLZWnuDF98WmmJQ5NhsXJFlJPwoKxfLowvAHTlLz+Q1Po4juZVZ+BkatRsqrI2sA2B0IIu2TJp4VEAFWMqzTTg==}
+  /@tensorflow/tfjs-layers@4.16.0(@tensorflow/tfjs-core@4.16.0):
+    resolution: {integrity: sha512-LNsbIF3SX45gG2FGo/34IPU+ObRCY5Z2znnp8cSqNZ96v52Q3nZ8GbyjYU9xDHv7eREKTSC2Aga2eGZ9Hfsl/g==}
     peerDependencies:
-      '@tensorflow/tfjs-core': 4.10.0
+      '@tensorflow/tfjs-core': 4.16.0
     dependencies:
-      '@tensorflow/tfjs-core': 4.10.0
+      '@tensorflow/tfjs-core': 4.16.0
     dev: false
 
-  /@tensorflow/tfjs@4.10.0(seedrandom@3.0.5):
-    resolution: {integrity: sha512-16q6CcGEoxfg3kimBzNBrZg069GRd4Du49uyQHUMsEvpHbmU0ZpWa2zhjjZ71GlURpbD1LZIZNp6cd2Q1Eqjow==}
+  /@tensorflow/tfjs@4.16.0(seedrandom@3.0.5):
+    resolution: {integrity: sha512-wBs29w1rsE6XpKdwJ7vrxGJ+nbyU7+51Pgj1ZhLFdv5ZXwF5irHbNX1DegSd/8VbHPEY6mQSPvEuSe1mIhMw5Q==}
     hasBin: true
     dependencies:
-      '@tensorflow/tfjs-backend-cpu': 4.10.0(@tensorflow/tfjs-core@4.10.0)
-      '@tensorflow/tfjs-backend-webgl': 4.10.0(@tensorflow/tfjs-core@4.10.0)
-      '@tensorflow/tfjs-converter': 4.10.0(@tensorflow/tfjs-core@4.10.0)
-      '@tensorflow/tfjs-core': 4.10.0
-      '@tensorflow/tfjs-data': 4.10.0(@tensorflow/tfjs-core@4.10.0)(seedrandom@3.0.5)
-      '@tensorflow/tfjs-layers': 4.10.0(@tensorflow/tfjs-core@4.10.0)
+      '@tensorflow/tfjs-backend-cpu': 4.16.0(@tensorflow/tfjs-core@4.16.0)
+      '@tensorflow/tfjs-backend-webgl': 4.16.0(@tensorflow/tfjs-core@4.16.0)
+      '@tensorflow/tfjs-converter': 4.16.0(@tensorflow/tfjs-core@4.16.0)
+      '@tensorflow/tfjs-core': 4.16.0
+      '@tensorflow/tfjs-data': 4.16.0(@tensorflow/tfjs-core@4.16.0)(seedrandom@3.0.5)
+      '@tensorflow/tfjs-layers': 4.16.0(@tensorflow/tfjs-core@4.16.0)
       argparse: 1.0.10
       chalk: 4.1.2
       core-js: 3.29.1
@@ -6224,8 +6144,8 @@ packages:
       - supports-color
     dev: true
 
-  /@webgpu/types@0.1.30:
-    resolution: {integrity: sha512-9AXJSmL3MzY8ZL//JjudA//q+2kBRGhLBFpkdGksWIuxrMy81nFrCzj2Am+mbh8WoU6rXmv7cY5E3rdlyru2Qg==}
+  /@webgpu/types@0.1.38:
+    resolution: {integrity: sha512-7LrhVKz2PRh+DD7+S+PVaFd5HxaWQvoMqBbsV9fNJO1pjUs1P8bM2vQVNfk+3URTqbuTI7gkXi0rfsN0IadoBA==}
     dev: false
 
   /@yarnpkg/esbuild-plugin-pnp@3.0.0-rc.15(esbuild@0.18.11):
