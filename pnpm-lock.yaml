@@ -103,8 +103,8 @@ importers:
         specifier: ^0.4.3
         version: 0.4.3(eslint@8.49.0)
       eslint-plugin-storybook:
-        specifier: ^0.6.13
-        version: 0.6.13(eslint@8.49.0)(typescript@5.1.6)
+        specifier: ^0.8.0
+        version: 0.8.0(eslint@8.49.0)(typescript@5.1.6)
       husky:
         specifier: ^8.0.3
         version: 8.0.3
@@ -3707,9 +3707,9 @@ packages:
     peerDependencies:
       eslint: '>=7'
 
-  eslint-plugin-storybook@0.6.13:
-    resolution: {integrity: sha512-smd+CS0WH1jBqUEJ3znGS7DU4ayBE9z6lkQAK2yrSUv1+rq8BT/tiI5C/rKE7rmiqiAfojtNYZRhzo5HrulccQ==}
-    engines: {node: 12.x || 14.x || >= 16}
+  eslint-plugin-storybook@0.8.0:
+    resolution: {integrity: sha512-CZeVO5EzmPY7qghO2t64oaFM+8FTaD4uzOEjHKp516exyTKo+skKAL9GI3QALS2BXhyALJjNtwbmr1XinGE8bA==}
+    engines: {node: '>= 18'}
     peerDependencies:
       eslint: '>=6'
 
@@ -8757,7 +8757,7 @@ snapshots:
       '@radix-ui/react-select': 1.2.2(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@radix-ui/react-toolbar': 1.0.4(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@storybook/client-logger': 7.6.5
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       '@storybook/theming': 7.6.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@storybook/types': 7.6.5
@@ -8973,7 +8973,7 @@ snapshots:
       '@babel/parser': 7.22.7
       '@babel/traverse': 7.22.8
       '@babel/types': 7.25.2
-      '@storybook/csf': 0.1.1
+      '@storybook/csf': 0.1.11
       '@storybook/types': 7.3.2
       fs-extra: 11.1.1
       recast: 0.23.2
@@ -9125,7 +9125,7 @@ snapshots:
       '@storybook/channels': 7.3.2
       '@storybook/client-logger': 7.3.2
       '@storybook/core-events': 7.3.2
-      '@storybook/csf': 0.1.1
+      '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       '@storybook/router': 7.3.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@storybook/theming': 7.3.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -9145,7 +9145,7 @@ snapshots:
       '@storybook/channels': 7.4.2
       '@storybook/client-logger': 7.4.2
       '@storybook/core-events': 7.4.2
-      '@storybook/csf': 0.1.1
+      '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       '@storybook/router': 7.4.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@storybook/theming': 7.4.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -9165,7 +9165,7 @@ snapshots:
       '@storybook/channels': 7.6.5
       '@storybook/client-logger': 7.6.5
       '@storybook/core-events': 7.6.5
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       '@storybook/router': 7.6.5
       '@storybook/theming': 7.6.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -9257,7 +9257,7 @@ snapshots:
       '@storybook/channels': 7.3.2
       '@storybook/client-logger': 7.3.2
       '@storybook/core-events': 7.3.2
-      '@storybook/csf': 0.1.1
+      '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       '@storybook/types': 7.3.2
       '@types/qs': 6.9.7
@@ -9274,7 +9274,7 @@ snapshots:
       '@storybook/channels': 7.4.2
       '@storybook/client-logger': 7.4.2
       '@storybook/core-events': 7.4.2
-      '@storybook/csf': 0.1.1
+      '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       '@storybook/types': 7.4.2
       '@types/qs': 6.9.7
@@ -9291,7 +9291,7 @@ snapshots:
       '@storybook/channels': 7.6.5
       '@storybook/client-logger': 7.6.5
       '@storybook/core-events': 7.6.5
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       '@storybook/types': 7.6.5
       '@types/qs': 6.9.7
@@ -10974,7 +10974,7 @@ snapshots:
     dependencies:
       eslint: 8.49.0
 
-  eslint-plugin-storybook@0.6.13(eslint@8.49.0)(typescript@5.1.6):
+  eslint-plugin-storybook@0.8.0(eslint@8.49.0)(typescript@5.1.6):
     dependencies:
       '@storybook/csf': 0.0.1
       '@typescript-eslint/utils': 5.62.0(eslint@8.49.0)(typescript@5.1.6)
