@@ -30,14 +30,14 @@ importers:
         specifier: ^4.20.0
         version: 4.20.0(seedrandom@3.0.5)
       apexcharts:
-        specifier: ^3.41.0
-        version: 3.41.0
+        specifier: ^3.52.0
+        version: 3.52.0
       react:
         specifier: ^18.2.0
         version: 18.2.0
       react-apexcharts:
         specifier: ^1.4.0
-        version: 1.4.0(apexcharts@3.41.0)(react@18.2.0)
+        version: 1.4.0(apexcharts@3.52.0)(react@18.2.0)
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
@@ -2926,6 +2926,9 @@ packages:
     resolution: {integrity: sha512-6xm38yGVIa6mKm/DUCF2zFFJhERh/QWp1ufm4cNUvxsONBmfPg8uZ9pZBdOmF6qFGr/HlT6ABBkCSx/dlEtvWg==}
     engines: {node: '>=12 <14 || 14.2 - 14.9 || >14.10.0'}
 
+  '@yr/monotone-cubic-spline@1.0.3':
+    resolution: {integrity: sha512-FQXkOta0XBSUPHndIKON2Y9JeQz5ZeMqLYZVVK93FliNBFm7LNMIZmY6FrMEB9XPcDbE2bekMbZD6kzDkxwYjA==}
+
   accepts@1.3.8:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
     engines: {node: '>= 0.6'}
@@ -3001,8 +3004,8 @@ packages:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
     engines: {node: '>= 8'}
 
-  apexcharts@3.41.0:
-    resolution: {integrity: sha512-FJXA7NVjxs1q+ptR3b1I+pN8K/gWuXn+qLZjFz8EHvJOokdgcuwa/HSe5aC465HW/LWnrjWLSTsOQejQbQ42hQ==}
+  apexcharts@3.52.0:
+    resolution: {integrity: sha512-7dg0ADKs8AA89iYMZMe2sFDG0XK5PfqllKV9N+i3hKHm3vEtdhwz8AlXGm+/b0nJ6jKiaXsqci5LfVxNhtB+dA==}
 
   app-root-dir@1.0.2:
     resolution: {integrity: sha512-jlpIfsOoNoafl92Sz//64uQHGSyMrD2vYG5d8o2a4qGvyNCvXur7bzIsWtAC/6flI2RYAp3kv8rsfBtaLm7w0g==}
@@ -10028,6 +10031,8 @@ snapshots:
       '@types/emscripten': 1.39.7
       tslib: 1.14.1
 
+  '@yr/monotone-cubic-spline@1.0.3': {}
+
   accepts@1.3.8:
     dependencies:
       mime-types: 2.1.35
@@ -10098,8 +10103,9 @@ snapshots:
       normalize-path: 3.0.0
       picomatch: 2.3.1
 
-  apexcharts@3.41.0:
+  apexcharts@3.52.0:
     dependencies:
+      '@yr/monotone-cubic-spline': 1.0.3
       svg.draggable.js: 2.2.2
       svg.easing.js: 2.0.0
       svg.filter.js: 2.0.2
@@ -12677,9 +12683,9 @@ snapshots:
       iconv-lite: 0.4.24
       unpipe: 1.0.0
 
-  react-apexcharts@1.4.0(apexcharts@3.41.0)(react@18.2.0):
+  react-apexcharts@1.4.0(apexcharts@3.52.0)(react@18.2.0):
     dependencies:
-      apexcharts: 3.41.0
+      apexcharts: 3.52.0
       prop-types: 15.8.1
       react: 18.2.0
 
