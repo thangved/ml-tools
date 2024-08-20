@@ -15,8 +15,8 @@ importers:
         specifier: ^11.11.0
         version: 11.11.0(@emotion/react@11.11.1(@types/react@18.2.20)(react@18.2.0))(@types/react@18.2.20)(react@18.2.0)
       '@fontsource/roboto':
-        specifier: ^5.0.3
-        version: 5.0.3
+        specifier: ^5.0.14
+        version: 5.0.14
       '@mui/icons-material':
         specifier: ^5.14.0
         version: 5.14.0(@mui/material@5.15.0(@emotion/react@11.11.1(@types/react@18.2.20)(react@18.2.0))(@emotion/styled@11.11.0(@emotion/react@11.11.1(@types/react@18.2.20)(react@18.2.0))(@types/react@18.2.20)(react@18.2.0))(@types/react@18.2.20)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@types/react@18.2.20)(react@18.2.0)
@@ -1312,8 +1312,8 @@ packages:
   '@floating-ui/utils@0.1.1':
     resolution: {integrity: sha512-m0G6wlnhm/AX0H12IOWtK8gASEMffnX08RtKkCgTdHb9JpHKGloI7icFfLg9ZmQeavcvR0PKmzxClyuFPSjKWw==}
 
-  '@fontsource/roboto@5.0.3':
-    resolution: {integrity: sha512-jbZDFwEFARDlo8TqG7th/xjhuq87GYfFpFb+uxuy+0Ng1bhRVgBRWlLj8+WIKhCTOr+h4QXbjpybLWFLUirOwQ==}
+  '@fontsource/roboto@5.0.14':
+    resolution: {integrity: sha512-zHAxlTTm9RuRn9/StwclFJChf3z9+fBrOxC3fw71htjHP1BgXNISwRjdJtAKAmMe5S2BzgpnjkQR93P9EZYI/Q==}
 
   '@hapi/hoek@9.3.0':
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
@@ -7386,7 +7386,7 @@ snapshots:
 
   '@floating-ui/utils@0.1.1': {}
 
-  '@fontsource/roboto@5.0.3': {}
+  '@fontsource/roboto@5.0.14': {}
 
   '@hapi/hoek@9.3.0': {}
 
