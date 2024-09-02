@@ -30,14 +30,14 @@ importers:
         specifier: ^4.20.0
         version: 4.20.0(seedrandom@3.0.5)
       apexcharts:
-        specifier: ^3.52.0
-        version: 3.52.0
+        specifier: ^3.53.0
+        version: 3.53.0
       react:
         specifier: ^18.3.1
         version: 18.3.1
       react-apexcharts:
         specifier: ^1.4.0
-        version: 1.4.0(apexcharts@3.52.0)(react@18.3.1)
+        version: 1.4.0(apexcharts@3.53.0)(react@18.3.1)
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.3.1)
@@ -2859,8 +2859,8 @@ packages:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
     engines: {node: '>= 8'}
 
-  apexcharts@3.52.0:
-    resolution: {integrity: sha512-7dg0ADKs8AA89iYMZMe2sFDG0XK5PfqllKV9N+i3hKHm3vEtdhwz8AlXGm+/b0nJ6jKiaXsqci5LfVxNhtB+dA==}
+  apexcharts@3.53.0:
+    resolution: {integrity: sha512-QESZHZY3w9LPQ64PGh1gEdfjYjJ5Jp+Dfy0D/CLjsLOPTpXzdxwlNMqRj+vPbTcP0nAHgjWv1maDqcEq6u5olw==}
 
   app-root-dir@1.0.2:
     resolution: {integrity: sha512-jlpIfsOoNoafl92Sz//64uQHGSyMrD2vYG5d8o2a4qGvyNCvXur7bzIsWtAC/6flI2RYAp3kv8rsfBtaLm7w0g==}
@@ -9378,7 +9378,7 @@ snapshots:
       normalize-path: 3.0.0
       picomatch: 2.3.1
 
-  apexcharts@3.52.0:
+  apexcharts@3.53.0:
     dependencies:
       '@yr/monotone-cubic-spline': 1.0.3
       svg.draggable.js: 2.2.2
@@ -11927,9 +11927,9 @@ snapshots:
       iconv-lite: 0.4.24
       unpipe: 1.0.0
 
-  react-apexcharts@1.4.0(apexcharts@3.52.0)(react@18.3.1):
+  react-apexcharts@1.4.0(apexcharts@3.53.0)(react@18.3.1):
     dependencies:
-      apexcharts: 3.52.0
+      apexcharts: 3.53.0
       prop-types: 15.8.1
       react: 18.3.1
 
